@@ -1,3 +1,31 @@
 body {
-    line-height: 2;
-}
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+.gradient-back {
+    background: none !important;
+    background-image: linear-gradient(#248bdf , #44bbff) !important;
+  }
+  
+  .homepage-div {
+    padding-top: 50px;
+    background-image: radial-gradient(#44bbff 35%, #04659c) !important;
+    height: calc(100vh - 100px);
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  
+  .width-max {
+    width: 100%;
+  }
+  
+  .p50pButton {
+    padding: 2px;
+  }
