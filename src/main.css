@@ -12,9 +12,8 @@ body {
     background-image: linear-gradient(#248bdf , #44bbff) !important;
   }
   
-  .homepage-div {
-    padding-top: 50px;
-    background-image: radial-gradient(#44bbff 35%, #04659c) !important;
+  .page-div {
+    padding-top: 50px;    
     height: calc(100vh - 100px);
     width: 100%;
     justify-content: center;
@@ -22,6 +21,10 @@ body {
     align-items: center;
   }
   
+  .height-max {
+    height: calc(100vh - 100px);
+  }
+
   .width-max {
     width: 100%;
   }

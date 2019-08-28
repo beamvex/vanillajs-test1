@@ -6,12 +6,12 @@
     <title>webpack 4 quickstart</title>
     <link rel="stylesheet" type="text/css" href="./node_modules/onsenui/css/onsenui.css">
     <link rel="stylesheet" type="text/css" href="./node_modules/onsenui/css/onsen-css-components.css">
-    
+
 </head>
 
 <body>
 
-    <div class="homepage-div" id="homepage">
+    <div class="page-div gradient-back" id="homepage">
         <div>
             <img src="assets/img/iscream-logo.png" alt="iscream.app" class="home-logo-center" />
 
@@ -45,17 +45,22 @@
         </div>
     </div>
 
-    <div id="map"></div>
+    <div id="mappage" class="page-div">
+            
+
+            <div id="map" class="height-max width-max">
+
+
+            </div>
+    </div>
     <script>
         var map;
         function initMap() {
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: -34.397, lng: 150.644 },
-                zoom: 8
-            });
+            
         }
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCI47PgInts5BBEQ8UypZYHqpf-zLeHiDY&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCI47PgInts5BBEQ8UypZYHqpf-zLeHiDY&callback=initMap"
+        async defer></script>
 
 
     <div class="tabbar">
