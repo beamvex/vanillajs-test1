@@ -11,6 +11,12 @@
 
 <body>
 
+    <div class="toolbar blacktoolbar">
+        <div class="toolbar__center">
+            <img src="assets/img/iscream-logo.png" alt="iscream.app" class="height-toolbar"/>
+        </div>
+    </div>
+
     <div class="page-div gradient-back" id="homepage">
         <div>
             <img src="assets/img/iscream-logo.png" alt="iscream.app" class="home-logo-center" />
@@ -46,45 +52,50 @@
     </div>
 
     <div id="mappage" class="page-div">
-            
-
-            <div id="map" class="height-max width-max">
 
 
-            </div>
+        <div id="map" class="height-max width-max">
+
+
+        </div>
     </div>
     <script>
         var map;
         function initMap() {
-            
+
         }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCI47PgInts5BBEQ8UypZYHqpf-zLeHiDY&callback=initMap"
         async defer></script>
 
+    <div class="page-div gradient-back" id="profilepage">
+        <div>
+
+        </div>
+    </div>
 
     <div class="tabbar">
         <label class="tabbar__item">
             <input type="radio" name="tabbar-a" checked="checked" id="hometabbutton">
-            <button class="tabbar__button">
-                <i class="tabbar__icon tabbar--material__icon zmdi zmdi-favorite"></i>
-                <div class="tabbar__label">One</div>
+            <button class="tabbar__button" id="homepagebutton">
+                <i class="tabbar__icon tabbar--material__icon zmdi zmdi-home"></i>
+                <div class="tabbar__label">Home</div>
             </button>
         </label>
 
         <label class="tabbar__item">
             <input type="radio" name="tabbar-a" id="maptabbutton">
-            <button class="tabbar__button">
-                <i class="tabbar__icon tabbar--material__icon zmdi zmdi-favorite"></i>
-                <div class="tabbar__label">Two</div>
+            <button class="tabbar__button" id="mappagebutton">
+                <i class="tabbar__icon tabbar--material__icon zmdi zmdi-map"></i>
+                <div class="tabbar__label">Map</div>
             </button>
         </label>
 
         <label class="tabbar__item">
-            <input type="radio" name="tabbar-a">
-            <button class="tabbar__button">
-                <i class="tabbar__icon tabbar--material__icon zmdi zmdi-favorite"></i>
-                <div class="tabbar__label">Three</div>
+            <input type="radio" name="tabbar-a" id="profiletabbutton">
+            <button class="tabbar__button" id="profilepagebutton">
+                <i class="tabbar__icon tabbar--material__icon zmdi zmdi-account"></i>
+                <div class="tabbar__label">Profile</div>
             </button>
         </label>
     </div>
