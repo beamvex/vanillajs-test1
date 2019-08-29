@@ -24,7 +24,8 @@ body {
 }
 
 .height-toolbar {
-    height: 40px;
+    height: 34px;
+    padding-top: 5px;
 }
 
 .width-max {
@@ -36,5 +37,6 @@ body {
 }
 
 .blacktoolbar {
-    background-color: black;
+    background: none !important;
+    background-image: linear-gradient(#246baf, #248bdf) !important;
 }
