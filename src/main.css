@@ -34,9 +34,16 @@ body {
 
 .p50pButton {
     padding: 2px;
+    width: 50%;
 }
 
 .blacktoolbar {
     background: none !important;
     background-image: linear-gradient(#246baf, #248bdf) !important;
+}
+
+.text-input {
+    border: 1px #add0ec solid;
+    margin: 2px;
+    padding: 2px;
 }
