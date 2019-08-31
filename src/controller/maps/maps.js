@@ -1,3 +1,5 @@
+import { HTMLMapMarker } from "./htmlmapmarker";
+
 export class Maps {
 
     constructor(app) {
@@ -17,6 +19,11 @@ export class Maps {
         this.initMap();
 
         this.getLocation();
+
+        google.maps.event.addDomListener(this.map, 'click', function(evt) {
+            console.log('Map was clicked!', evt);
+          });
+  
 
     }
 
@@ -41,7 +48,14 @@ export class Maps {
     }
 
     centreMap() {
-        this.map.setCenter({ lat: this.position.coords.latitude, lng: this.position.coords.longitude });
+
+        this.centerLatLng = { lat: this.position.coords.latitude, lng: this.position.coords.longitude };
+
+        this.map.setCenter(this.centerLatLng);
+
+        this.mymarker = new HTMLMapMarker(this.centerLatLng, 
+            this.viewState.getElement('mymarker'), 
+            this.map);
     }
 
     clickbutton(evt) {

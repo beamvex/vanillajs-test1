@@ -25,6 +25,7 @@
     "img-loader": "^3.0.1",
     "url-loader": "^2.1.0",
     "file-loader": "^4.2.0",
-    "firebase": "^6.5.0"
+    "firebase": "^6.5.0",
+    "google-maps": "^3.3.0"
   }
 }
