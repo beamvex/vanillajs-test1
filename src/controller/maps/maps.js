@@ -7,6 +7,15 @@ export class Maps {
 
         this.viewState.bindEvent('maptabbutton', 'click', this.clickbutton.bind(this));
 
+        this.position = {
+            coords: {
+                latitude: 51.4769,
+                longitude: -0.00050
+            }
+        };
+
+        this.initMap();
+
         this.getLocation();
 
     }
@@ -21,7 +30,7 @@ export class Maps {
 
     showPosition(position) {
         this.position = position;
-        this.initMap();
+        this.centreMap();
     }
 
     initMap() {
@@ -31,10 +40,14 @@ export class Maps {
         });
     }
 
+    centreMap() {
+        this.map.setCenter({ lat: this.position.coords.latitude, lng: this.position.coords.longitude });
+    }
+
     clickbutton(evt) {
 
         if (evt.target.id === 'maptabbutton') {
-            this.initMap();
+            this.centreMap();
         }
     }
 
