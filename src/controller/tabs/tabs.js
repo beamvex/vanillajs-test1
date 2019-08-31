@@ -13,24 +13,22 @@ export class Tabs {
         this.viewState.getElement('maptabbutton').checked = false;
         this.viewState.getElement('profiletabbutton').checked = false;
 
+        this.viewState.getElement('canvas').appendChild(this.viewState.getElement('homepage'));
+
     }
 
     clickbutton(evt) {
-    
-        console.log('really', evt);
+
+        while (this.viewState.getElement('canvas').childNodes.length > 0) {
+            this.viewState.getElement('canvas').removeChild(this.viewState.getElement('canvas').childNodes[0]);
+        }
 
         if(evt.target.id === 'maptabbutton') {
-            this.viewState.getElement('homepage').style.display = "none"; 
-            this.viewState.getElement('profilepage').style.display = "none"; 
-            this.viewState.getElement('mappage').removeAttribute('style');     
+            this.viewState.getElement('canvas').appendChild(this.viewState.getElement('mappage'));   
         } else if(evt.target.id === 'hometabbutton') {
-            this.viewState.getElement('mappage').style.display = "none"; 
-            this.viewState.getElement('profilepage').style.display = "none"; 
-            this.viewState.getElement('homepage').removeAttribute('style');
+            this.viewState.getElement('canvas').appendChild(this.viewState.getElement('homepage'));
         } else if(evt.target.id === 'profiletabbutton') {
-            this.viewState.getElement('mappage').style.display = "none"; 
-            this.viewState.getElement('homepage').style.display = "none"; 
-            this.viewState.getElement('profilepage').removeAttribute('style');
+            this.viewState.getElement('canvas').appendChild(this.viewState.getElement('profilepage'));
         }
     }
 

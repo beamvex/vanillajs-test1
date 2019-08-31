@@ -17,60 +17,10 @@
         </div>
     </div>
 
-    <div class="page-div gradient-back" id="homepage">
-        <div>
-            <img src="assets/img/iscream-logo.png" alt="iscream.app" class="home-logo-center" />
-
-            <div class="card">
-                <h2 class="card__title">Sign in or Sign up</h2>
-
-                <ons-row>
-                    <ons-col>
-                        <input class="width-max text-input" placeholder='E-mail Address' />
-                    </ons-col>
-                </ons-row>
-                <ons-row>
-                    <ons-col>
-                        <input class="width-max text-input" placeholder='Password' type="password" />
-                    </ons-col>
-                </ons-row>
-                <ons-row>
-                    <ons-col class="p50pButton">
-                        <button class="button--large--cta">
-                            Sign In!
-                        </button>
-                    </ons-col>
-                    <ons-col class="p50pButton">
-                        <button class="button--large--cta">
-                            Sign Up!
-                        </button>
-                    </ons-col>
-                </ons-row>
-            </div>
-        </div>
-    </div>
-
-    <div id="mappage" class="page-div">
+    <div id="canvas">
 
 
-        <div id="map" class="height-max width-max">
 
-
-        </div>
-    </div>
-    <script>
-        var map;
-        function initMap() {
-
-        }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCI47PgInts5BBEQ8UypZYHqpf-zLeHiDY&callback=initMap"
-        async defer></script>
-
-    <div class="page-div gradient-back" id="profilepage">
-        <div>
-
-        </div>
     </div>
 
     <div class="tabbar">
@@ -98,6 +48,68 @@
             </button>
         </label>
     </div>
+
+    <div id="furniture" style="display: none">
+
+        <div class="page-div gradient-back" id="homepage">
+            <div>
+                <img src="assets/img/iscream-logo.png" alt="iscream.app" class="home-logo-center" />
+
+                <div class="card">
+                    <h2 class="card__title">Sign in or Sign up</h2>
+
+                    <ons-row>
+                        <ons-col>
+                            <input class="width-max text-input" placeholder='E-mail Address' />
+                        </ons-col>
+                    </ons-row>
+                    <ons-row>
+                        <ons-col>
+                            <input class="width-max text-input" placeholder='Password' type="password" />
+                        </ons-col>
+                    </ons-row>
+                    <ons-row>
+                        <ons-col class="p50pButton">
+                            <button class="button--large--cta">
+                                Sign In!
+                            </button>
+                        </ons-col>
+                        <ons-col class="p50pButton">
+                            <button class="button--large--cta">
+                                Sign Up!
+                            </button>
+                        </ons-col>
+                    </ons-row>
+                </div>
+            </div>
+        </div>
+
+        <div id="mappage" class="page-div">
+
+
+            <div id="map" class="height-max width-max">
+
+
+            </div>
+        </div>
+        <script>
+            var map;
+            function initMap() {
+
+            }
+        </script>
+        <script
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCI47PgInts5BBEQ8UypZYHqpf-zLeHiDY&callback=initMap"
+            async defer></script>
+
+        <div class="page-div gradient-back" id="profilepage">
+            <div>
+
+            </div>
+        </div>
+
+    </div>
+
 </body>
 
 </html>

@@ -29,6 +29,9 @@ export class ViewState {
     }
 
     getElement(name) {
+        if (this.elements[name] === undefined) {
+            this.findElements([name]);
+        }
         return this.elements[name];
     }
 
