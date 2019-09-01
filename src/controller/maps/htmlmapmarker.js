@@ -17,25 +17,20 @@ export class HTMLMapMarker {
   createDiv() {
     this.div = document.createElement('div');
     this.div.style.position = 'absolute';
-    console.log(this.html);
+    
     if (this.html) {
       this.div.appendChild(this.html);
 
       google.maps.event.addDomListener(this.div, 'click', event => {
-        console.log('you clicked it');
         google.maps.event.trigger(this, 'click');
       });
 
-      google.maps.event.addListener(this.innerOverlay, 'click', event => {
-        console.log('you clicked it');
-      });
     }
 
   }
 
   appendDivToOverlay() {
     const panes = this.innerOverlay.getPanes();
-    console.log(panes);
     panes.overlayMouseTarget.appendChild(this.div);
   }
 
@@ -45,7 +40,6 @@ export class HTMLMapMarker {
       this.div.style.left = `${point.x}px`;
       this.div.style.top = `${point.y}px`;
     }
-    console.log(point, this.div);
   }
 
   onAdd() {

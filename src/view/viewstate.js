@@ -18,8 +18,6 @@ export class ViewState {
             'map'
         ]);
 
-        console.log(this);
-
     }
 
     findElements(elms) {

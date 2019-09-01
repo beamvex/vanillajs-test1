@@ -20,7 +20,7 @@ export class Maps {
 
         this.getLocation();
 
-        google.maps.event.addDomListener(this.map, 'click', function(evt) {
+        google.maps.event.addListener(this.map, 'click', function(evt) {
             console.log('Map was clicked!', evt);
           });
   
@@ -56,6 +56,10 @@ export class Maps {
             this.mymarker = new HTMLMapMarker(this.centerLatLng, 
             this.viewState.getElement('mymarker'), 
             this.map);
+
+            google.maps.event.addListener(this.mymarker, 'click', function(evt) {
+                console.log('My marker was clicked!', evt);
+              });
         } 
         
     }
