@@ -6,7 +6,9 @@ export class HTMLMapMarker {
 
       this.innerOverlay = new google.maps.OverlayView();
 
+      this.innerOverlay.onAdd = this.onAdd.bind(this);
       this.innerOverlay.draw = this.draw.bind(this);
+      this.innerOverlay.onRemove = this.onRemove.bind(this);
 
       this.innerOverlay.setMap(map);
 
@@ -19,7 +21,7 @@ export class HTMLMapMarker {
       if (this.html) {
         this.div.appendChild(this.html);
       
-      google.maps.event.addDomListener(this.html, 'click', event => {
+      google.maps.event.addDomListener(this.div, 'click', event => {
         console.log('you clicked it');
         google.maps.event.trigger(this, 'click');
       });
@@ -33,7 +35,8 @@ export class HTMLMapMarker {
   
     appendDivToOverlay() {
       const panes = this.innerOverlay.getPanes();
-      panes.overlayLayer.appendChild(this.div);
+      console.log(panes);
+      panes.overlayMouseTarget.appendChild(this.div);
     }
   
     positionDiv() {
@@ -45,15 +48,18 @@ export class HTMLMapMarker {
       console.log(point, this.div);
     }
   
-    draw() {
+    onAdd() {
       if (!this.div) {
         this.createDiv();
         this.appendDivToOverlay();
       }
+    }
+
+    draw() {      
       this.positionDiv();
     }
   
-    remove() {
+    onRemove() {
       if (this.div) {
         this.div.parentNode.removeChild(this.div);
         this.div = null;

@@ -24,7 +24,6 @@ export class Maps {
             console.log('Map was clicked!', evt);
           });
   
-
     }
 
     getLocation() {
@@ -53,9 +52,12 @@ export class Maps {
 
         this.map.setCenter(this.centerLatLng);
 
-        this.mymarker = new HTMLMapMarker(this.centerLatLng, 
+        if (!this.mymarker) {
+            this.mymarker = new HTMLMapMarker(this.centerLatLng, 
             this.viewState.getElement('mymarker'), 
             this.map);
+        } 
+        
     }
 
     clickbutton(evt) {
