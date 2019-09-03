@@ -27,6 +27,8 @@ export class HTMLMapMarker {
 
     }
 
+    console.log(this.latlng.lng());
+
   }
 
   appendDivToOverlay() {

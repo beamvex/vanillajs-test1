@@ -1,4 +1,5 @@
 import { HTMLMapMarker } from "./htmlmapmarker";
+import { Trucks } from "../trucks/trucks";
 
 export class Maps {
 
@@ -23,7 +24,8 @@ export class Maps {
         google.maps.event.addListener(this.map, 'click', function(evt) {
             console.log('Map was clicked!', evt);
           });
-  
+
+         this.trucks = new Trucks(app, this.map);
     }
 
     getLocation() {
